@@ -30,6 +30,7 @@ function start(response,request) {
     console.log("about to parse");
     form.parse(request, function(error, fields, files) {
         console.log("parsing done");
+        console.log("git test");
         fs.renameSync(files.upload.path, "C:\\Project\\Node\\NodeDemo\\tmp\\test.png");
         response.writeHead(200, {"Content-Type": "text/html"});
         response.write("received image:<br/>");
